@@ -1,4 +1,3 @@
-DESTDIR		?=
 PREFIX		?= /usr
 SBINDIR		?= $(PREFIX)/sbin
 MANDIR		?= $(PREFIX)/share/man
@@ -12,7 +11,7 @@ all: clean
 
 install: all
 	$(MAKE) -C $(SRC) install
-	install -D -m 0644 man/mdk4.8 $(DESTDIR)$(MANDIR)/man8/mdk4.8
+	install -D -m 0644 man/mdk4.8 $(MANDIR)/man8/mdk4.8
 
 .PHONY : clean
 clean:
